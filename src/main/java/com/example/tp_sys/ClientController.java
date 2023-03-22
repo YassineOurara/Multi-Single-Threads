@@ -10,21 +10,25 @@ import javafx.scene.control.*;
 import java.io.*;
 import java.net.Socket;
 
-public class HelloController {
+public class ClientController {
+    @FXML
+    private Button btn;
 
     @FXML
-    private Button btnco;
+    private ListView<?> listv;
 
     @FXML
-    private TextField loc;
+    private TextField textFieldHost;
+
+    ObservableList<String> listModel = FXCollections.observableArrayList();
 
     @FXML
-    private TextField port;
-    ObservableList<String> listModel= FXCollections.observableArrayList();
+    private TextField textFieldPort;
+
     @FXML
-    protected void conn(ActionEvent event) throws IOException {
-        String host = loc.getText();
-        int prt = Integer.parseInt(port.getText());
+    void conn(ActionEvent event) throws  IOException{
+        String host = textFieldHost.getText();
+        int prt = Integer.parseInt(textFieldPort.getText());
         try {
             Socket socket = new Socket(host,prt);
             InputStream inputStream = socket.getInputStream();
@@ -48,4 +52,8 @@ public class HelloController {
     }
 
 
-}
+    }
+
+
+
+

@@ -32,34 +32,35 @@ public class ClientChat extends Application{
 	}
 	
 	public void start(Stage primaryStge) throws Exception {
-		primaryStge.setTitle("Client Chat");
+		primaryStge.setTitle("Client");
 		BorderPane borderPane = new BorderPane();
-		Label labelHost = new Label("Host:");
 		TextField textFieldHost = new TextField("localhost");
-		Label labelPort = new Label("Port:");
-		TextField textFieldPort = new TextField("");
-		Button buttonConnector = new Button("Connecter");
+		textFieldHost.setBackground(new Background(new BackgroundFill(Color.GRAY,null,null)));
+		TextField textFieldPort = new TextField("Port");
+		textFieldPort.setBackground(new Background(new BackgroundFill(Color.GRAY,null,null)));
+		Button btn = new Button("Connecter");
+		btn.setMaxWidth(100);
+		btn.setBackground(new Background(new BackgroundFill(Color.WHITE,null,null)));
 
 		HBox hBox = new HBox();
 		hBox.setSpacing(10);
-		hBox.setPadding(new Insets(10));
-		hBox.setBackground(new Background(new BackgroundFill(Color.AQUA, null, null)));
-		hBox.getChildren().addAll(labelHost,textFieldHost,labelPort,textFieldPort,buttonConnector);
+		hBox.setPadding(new Insets(100));
+		hBox.getChildren().addAll(textFieldHost,textFieldPort,btn);
 		borderPane.setTop(hBox);
 		VBox vBox2 = new VBox();
-		vBox2.setSpacing(10);
-		hBox.setPadding(new Insets(10));
+		vBox2.setSpacing(100);
+		hBox.setPadding(new Insets(40));
 
 		ObservableList<String> listModel=FXCollections.observableArrayList();
 		ListView<String> listView = new ListView<String>(listModel);
 		borderPane.setCenter(listView);
 		vBox2.getChildren().add(listView);
 		borderPane.setCenter(vBox2);
-		Scene scene = new Scene(borderPane, 540, 600);
+		Scene scene = new Scene(borderPane, 540, 400);
 		primaryStge.setScene(scene);
 		primaryStge.show();
 
-		buttonConnector.setOnAction((event)->{
+		btn.setOnAction((event)->{
 			String host = textFieldHost.getText();
 			int port = Integer.parseInt(textFieldPort.getText());
 			try {

@@ -34,7 +34,9 @@ public class ClientController {
             InputStream inputStream = socket.getInputStream();
             InputStreamReader isr = new InputStreamReader(inputStream);
             BufferedReader bufferedReader = new BufferedReader(isr);
-            PrintWriter pw = new PrintWriter(socket.getOutputStream(), true);
+            OutputStream os = socket.getOutputStream();
+            PrintWriter pw = new PrintWriter(os, true);
+            String ip = socket.getRemoteSocketAddress().toString();
             new Thread(()->{
                 try {
                     while(true) {
@@ -52,7 +54,8 @@ public class ClientController {
     }
 
 
-    }
+}
+
 
 
 

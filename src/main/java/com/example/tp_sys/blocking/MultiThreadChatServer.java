@@ -1,5 +1,8 @@
 package com.example.tp_sys.blocking;
 
+import javafx.scene.control.ListView;
+
+import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -51,8 +54,7 @@ public class MultiThreadChatServer extends Thread {
 				OutputStream os = socket.getOutputStream();
 				PrintWriter pw = new PrintWriter(os, true);
 				String ip = socket.getRemoteSocketAddress().toString();
-				System.out.println("New Client connection => "+clientId+" IP= "+ip);
-				pw.println("Welcome, your ID is => "+clientId);
+				System.out.println("New Client connection =>  IP= "+ip +"\n Welcome, your ID is => "+clientId);
 				String request;
 				while((request=br.readLine())!=null) {
 					System.out.println("New Request => IP = "+ip+" Request = "+request);

@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.text.Text;
 
 
 import java.io.*;
@@ -17,13 +18,15 @@ public class ClientController {
 
     @FXML
     private TextField textFieldHost;
-    ObservableList<String> listModel=FXCollections.observableArrayList();
+    @FXML
+    private ObservableList<String> listModel=FXCollections.observableArrayList();
 
     @FXML
     ListView<String> listv = new ListView<>(listModel);
 
     @FXML
     private TextField textFieldPort;
+
 
     @FXML
     void conn(ActionEvent event) throws IOException{
@@ -34,9 +37,9 @@ public class ClientController {
             InputStream inputStream = socket.getInputStream();
             InputStreamReader isr = new InputStreamReader(inputStream);
             BufferedReader bufferedReader = new BufferedReader(isr);
-            OutputStream os = socket.getOutputStream();
-            PrintWriter pw = new PrintWriter(os, true);
-            String ip = socket.getRemoteSocketAddress().toString();
+            PrintWriter pw = new PrintWriter(socket.getOutputStream(), true);
+
+
             new Thread(()->{
                 try {
                     while(true) {

@@ -45,13 +45,13 @@
 .btninscri{
 -fx-background-color: transparent;
 -fx-cursor: hand;
--fx-border-color: black;
+-fx-border-color: grey;
 -fx-border-width:0px 0px 0px 4px;
 
 }
 
 .btninscri:hover {
--fx-border-color: snow;
+-fx-border-color: green;
 -fx-border-width:0px 0px 0px 4px;
 
 }
@@ -62,7 +62,7 @@
 -fx-border-radius: 10px 100px / 120px;
 }
 .inscri:focused{
--fx-border-color: snow;
+-fx-border-color: grey;
 }
 .btn_dr{
 -fx-background-color: transparent;

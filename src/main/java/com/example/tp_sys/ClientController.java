@@ -14,19 +14,19 @@ public class ClientController {
     @FXML
     private Button btn;
 
-    @FXML
-    private ListView<?> listv;
 
     @FXML
     private TextField textFieldHost;
+    ObservableList<String> listModel=FXCollections.observableArrayList();
 
-    ObservableList<String> listModel = FXCollections.observableArrayList();
+    @FXML
+    ListView<String> listv = new ListView<>(listModel);
 
     @FXML
     private TextField textFieldPort;
 
     @FXML
-    void conn(ActionEvent event) throws  IOException{
+    void conn(ActionEvent event) throws IOException{
         String host = textFieldHost.getText();
         int prt = Integer.parseInt(textFieldPort.getText());
         try {

@@ -16,7 +16,7 @@
                 <ImageView fitHeight="799.0" fitWidth="180.0" layoutX="444.0" pickOnBounds="true" preserveRatio="true">
 
                 </ImageView>
-              <AnchorPane layoutX="-4.0" layoutY="98.0" prefHeight="703.0" prefWidth="914.0" style="-fx-background-color: #007FA4;">
+              <AnchorPane layoutX="-4.0" layoutY="98.0" prefHeight="703.0" prefWidth="914.0" style="-fx-background-color: grey;">
                   <children>
                       <Text fill="WHITE" layoutX="45.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLIENT JAVAFX">
                           <font>

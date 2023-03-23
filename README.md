@@ -32,6 +32,17 @@
     Python
 ![noblockpy](https://user-images.githubusercontent.com/101317995/227257277-0d39655c-dfa2-40be-a8bf-ff5f7295c1fd.png)
 
+3- Utiliser un outil Comme JMeeter pour tester les performances des deux serveurs
+
+    Multi
+
+
+![31](https://user-images.githubusercontent.com/101317995/227386954-2f64d71d-1404-44bb-ba65-ef19b0be0d89.png)
+
+    Single
+
+
+![32](https://user-images.githubusercontent.com/101317995/227387003-9fdc1c79-7b4d-4f04-aee5-c4c6327cabc3.png)
 
    
 

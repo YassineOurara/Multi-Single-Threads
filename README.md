@@ -2,7 +2,9 @@
 
 1-  Modèle Multi Threads Blocking IO (java.io)
 
-    Développer un serveur de Multi Thread Blocking IO de ChatServer
     Tester le serveur avec un client Telnet
-    Créer un client Java avec une interface graphique JavaFX
-    Créer un client Python ou un autre langage quelconque
+    
+    ![telnet](https://user-images.githubusercontent.com/101317995/227254045-870c144d-f24d-4426-b640-a68b5f5c30b0.png)
+
+
+    
